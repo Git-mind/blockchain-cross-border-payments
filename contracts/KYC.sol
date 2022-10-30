@@ -19,6 +19,7 @@ contract KYC{
         // string nationality;
         // uint256 timestamp;
         // test git changes
+        // test git changes - xianwei
     }
 
     function onboarding(address payable userAddress, string memory role, string memory firstName, string memory lastName) public {
