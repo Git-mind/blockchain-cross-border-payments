@@ -21,7 +21,26 @@
 						"type": "bool"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "isPoliticallyExposed",
+						"type": "string"
+					}
+				],
+				"name": "checkPoliticalStatus",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -53,11 +72,11 @@
 	},
 	"sources": {
 		"contracts/AML.sol": {
-			"keccak256": "0xb56488ee5d9fb7736bf640a063a275cb009996c246e0ba1e2af29a5ef5731fdf",
+			"keccak256": "0x89ff1571e7e79a24e4a00323f557eae92a7dbb49e5dbd62a8a33cd271e6b3847",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://49b565440bb5acf8bf43a46f1a8325c00bad8032a9692488e06450c87fedb0ce",
-				"dweb:/ipfs/QmW6A2p9x5btk34nTbzj8m7bSG9xHt3Wn6xE4AnR7KLy46"
+				"bzz-raw://3555955d158cda34602ad9af5aa64c1c17938ab2527d665dbe77cfc2ae960f74",
+				"dweb:/ipfs/QmWA1Au3Z4qLnGvVtZEGzywZ5cnb2THKbQznTHMgWo7iQd"
 			]
 		}
 	},

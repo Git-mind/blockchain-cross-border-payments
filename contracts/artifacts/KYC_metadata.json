@@ -64,9 +64,14 @@
 								"internalType": "string",
 								"name": "nationality",
 								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
 							}
 						],
-						"internalType": "struct KYC.UserInfoStruct",
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
 						"name": "",
 						"type": "tuple"
 					}
@@ -110,6 +115,11 @@
 						"internalType": "string",
 						"name": "nationality",
 						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isPoliticallyExposed",
+						"type": "bool"
 					}
 				],
 				"name": "onboarding",
@@ -146,11 +156,19 @@
 	},
 	"sources": {
 		"contracts/KYC.sol": {
-			"keccak256": "0xa71f977a608c06c2a3047570f771467b43e20a6a220e45f76f29d723f0756d47",
+			"keccak256": "0x18d1329e50c0af89319e4683edef4db770bef2d661444d836168ac4aafec5f64",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://36a800b20ae8e90f9af16d8bd1260100f5a8215a4e2e692e9046344e640372be",
-				"dweb:/ipfs/QmYqXjikhUXcRuhvfB8VXC22NHHcQDpRMawJ2HvALg4o9e"
+				"bzz-raw://3d33f96e131dcefa3fcb0fb49cc89d3a6b1f83a8f9cc4499a6a59046c18a9140",
+				"dweb:/ipfs/QmZZHhmRzAhNEpDJdLjFsN6vwb1SK21TroYSaxjmoMWkbv"
+			]
+		},
+		"contracts/UserInfoLibrary.sol": {
+			"keccak256": "0x74165fbf831df16307e8297f959ed75dd981cfa086ec9f48c5d0c8e2957de891",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://524f26199e915925546d91e7a55611d5c89c685414a651403e7483f36bff8059",
+				"dweb:/ipfs/QmbZNVdkdYi171DKw4bmdmC6Ad6rnAoAa6uao5nSsdwiy1"
 			]
 		}
 	},

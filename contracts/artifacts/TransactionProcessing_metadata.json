@@ -19,7 +19,12 @@
 					},
 					{
 						"internalType": "address",
-						"name": "_amlAddress",
+						"name": "_sgAmlAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_ausAmlAddress",
 						"type": "address"
 					}
 				],
@@ -51,7 +56,7 @@
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "firstName",
+						"name": "nationality",
 						"type": "string"
 					},
 					{
@@ -65,11 +70,82 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "transferStatus",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CreateTransferStatusLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "ausAML",
+						"type": "bool"
+					}
+				],
+				"name": "testAusLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "finalLog",
+						"type": "bool"
+					}
+				],
+				"name": "testFinalLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "sgAML",
+						"type": "bool"
+					}
+				],
+				"name": "testSgLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "sgResult",
+						"type": "bool"
+					}
+				],
+				"name": "testSgResult",
+				"type": "event"
+			},
+			{
 				"inputs": [],
-				"name": "aml",
+				"name": "ausAml",
 				"outputs": [
 					{
-						"internalType": "contract AML",
+						"internalType": "contract AusAML",
 						"name": "",
 						"type": "address"
 					}
@@ -138,13 +214,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "sendViaCall",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "sender",
 				"outputs": [
 					{
@@ -154,6 +223,26 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sgAml",
+				"outputs": [
+					{
+						"internalType": "contract SgAML",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -184,28 +273,44 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/AML.sol": {
-			"keccak256": "0xb56488ee5d9fb7736bf640a063a275cb009996c246e0ba1e2af29a5ef5731fdf",
+		"contracts/AusAML.sol": {
+			"keccak256": "0xf3f8bb0349f19e623b3cafe2a91fe3739d7a1a4b03183ee9349495424b59dddd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://49b565440bb5acf8bf43a46f1a8325c00bad8032a9692488e06450c87fedb0ce",
-				"dweb:/ipfs/QmW6A2p9x5btk34nTbzj8m7bSG9xHt3Wn6xE4AnR7KLy46"
+				"bzz-raw://8c790fd1e0f1867f68baea928ec34f057f927c8cb4b5f1b5de7aedc92a69f28b",
+				"dweb:/ipfs/QmSx2tUuJbD3zdHNvK1ryZK2RqYh69x3s313usQL6D3BzK"
 			]
 		},
 		"contracts/KYC.sol": {
-			"keccak256": "0xa71f977a608c06c2a3047570f771467b43e20a6a220e45f76f29d723f0756d47",
+			"keccak256": "0x18d1329e50c0af89319e4683edef4db770bef2d661444d836168ac4aafec5f64",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://36a800b20ae8e90f9af16d8bd1260100f5a8215a4e2e692e9046344e640372be",
-				"dweb:/ipfs/QmYqXjikhUXcRuhvfB8VXC22NHHcQDpRMawJ2HvALg4o9e"
+				"bzz-raw://3d33f96e131dcefa3fcb0fb49cc89d3a6b1f83a8f9cc4499a6a59046c18a9140",
+				"dweb:/ipfs/QmZZHhmRzAhNEpDJdLjFsN6vwb1SK21TroYSaxjmoMWkbv"
+			]
+		},
+		"contracts/SgAML.sol": {
+			"keccak256": "0x20b95f9fd742c080fd66b15496f647ae0ab9e0d53299ebc2e17bc7afea94f198",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e727329e7cc08eb8d7e7db4d7fd54e72ed78f0c4ffe9bd92240a416f31c71a1",
+				"dweb:/ipfs/QmTkyMN8TRDd4iHjXRLXDVefLs6d4u2mjkWYJpeuiyaFQD"
 			]
 		},
 		"contracts/TransactionProcessing.sol": {
-			"keccak256": "0x92c791e89997cb7067c502be03b0cd94e53d414c23f2313d03525abe3c84a3a7",
+			"keccak256": "0x353897d325213c8f32edc6d1bc953df9ec9248b2dc6fab0ad47c52e152328507",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e5afda973012434fa5c0334de7c6e1664d3353da6983b590d65879958d38a3b0",
-				"dweb:/ipfs/QmR33EZtMGxvQaGxbDZhTCTWoe8pAfYQzaXFxGuKxpKxxm"
+				"bzz-raw://a5fd0ab2421434d9d3e07cddbff5d0c898ba0effd4008d6a20fe980c4aa5acce",
+				"dweb:/ipfs/QmV6SrLNotsBecPbMMSzMDdaeXAXQwNHJqXhNpmn8BWZJV"
+			]
+		},
+		"contracts/UserInfoLibrary.sol": {
+			"keccak256": "0x74165fbf831df16307e8297f959ed75dd981cfa086ec9f48c5d0c8e2957de891",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://524f26199e915925546d91e7a55611d5c89c685414a651403e7483f36bff8059",
+				"dweb:/ipfs/QmbZNVdkdYi171DKw4bmdmC6Ad6rnAoAa6uao5nSsdwiy1"
 			]
 		}
 	},

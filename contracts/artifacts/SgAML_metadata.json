@@ -1,0 +1,478 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "exceedAmt",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CreateExceededMaxAmtErrorLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "nationality",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CreateNationalityErrorLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "politicallyExposed",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CreatePoliticallyExposedErrorLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "wantedInd",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CreateWantedIndividualErrorLog",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "checkAmt",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
+						"name": "senderUserInfo",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
+						"name": "receiverUserInfo",
+						"type": "tuple"
+					}
+				],
+				"name": "checkNationality",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
+						"name": "senderUserInfo",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
+						"name": "receiverUserInfo",
+						"type": "tuple"
+					}
+				],
+				"name": "checkPoliticalStatus",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
+						"name": "senderUserInfo",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "firstName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isPoliticallyExposed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UserInfoLibrary.UserInfoStruct",
+						"name": "receiverUserInfo",
+						"type": "tuple"
+					}
+				],
+				"name": "checkWantedIndividual",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SgAML.sol": "SgAML"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SgAML.sol": {
+			"keccak256": "0x20b95f9fd742c080fd66b15496f647ae0ab9e0d53299ebc2e17bc7afea94f198",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e727329e7cc08eb8d7e7db4d7fd54e72ed78f0c4ffe9bd92240a416f31c71a1",
+				"dweb:/ipfs/QmTkyMN8TRDd4iHjXRLXDVefLs6d4u2mjkWYJpeuiyaFQD"
+			]
+		},
+		"contracts/UserInfoLibrary.sol": {
+			"keccak256": "0x74165fbf831df16307e8297f959ed75dd981cfa086ec9f48c5d0c8e2957de891",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://524f26199e915925546d91e7a55611d5c89c685414a651403e7483f36bff8059",
+				"dweb:/ipfs/QmbZNVdkdYi171DKw4bmdmC6Ad6rnAoAa6uao5nSsdwiy1"
+			]
+		}
+	},
+	"version": 1
+}
