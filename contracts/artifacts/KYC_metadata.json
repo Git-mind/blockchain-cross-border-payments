@@ -6,34 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "userAddress",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "role",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "firstName",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "lastName",
-						"type": "string"
-					}
-				],
-				"name": "addDataToBlockchain",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "getTransactionCount",
 				"outputs": [
@@ -86,6 +58,34 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "firstName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "lastName",
+						"type": "string"
+					}
+				],
+				"name": "onboarding",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -116,11 +116,11 @@
 	},
 	"sources": {
 		"contracts/KYC.sol": {
-			"keccak256": "0x85b4d7306e036f5eca0988f90ec9ef03db38130670f133b1d1b4e405af9b8ab7",
+			"keccak256": "0xbe51ceed4f86df1958b74f3cf7a7a6e90825dcb17eb757b57593a4a60ef875ba",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e0970769d8277685a3719c04709423e68e54d2b26a7bcf191b92515de05c4e24",
-				"dweb:/ipfs/QmQkReHysfWE6ycn7nwXM4GRdt6NBvF1Dw7Pzgvu2Fs1Kd"
+				"bzz-raw://3f767e2be8c118a5a8f0505cca1ea7214a33aa781c1e6b9e08a32dad817be392",
+				"dweb:/ipfs/QmW3kd9NX5hkPSztavCuVT8bxZHnkvvTuYNPNWShXXfhew"
 			]
 		}
 	},

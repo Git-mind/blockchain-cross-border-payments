@@ -21,7 +21,7 @@ contract KYC{
         // test git changes
     }
 
-    function addDataToBlockchain(address payable userAddress, string memory role, string memory firstName, string memory lastName) public {
+    function onboarding(address payable userAddress, string memory role, string memory firstName, string memory lastName) public {
         transactionCount +=1;
         // transactions.push(TransferFundsStruck(msg.sender, receiver, amount, message, block.timestamp));
         userDict[userAddress] = UserInfoStruct(userAddress, role, firstName, lastName);
