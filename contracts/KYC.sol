@@ -18,6 +18,7 @@ contract KYC{
         // string phoneNum;
         // string nationality;
         // uint256 timestamp;
+        // test git changes
     }
 
     function addDataToBlockchain(address payable userAddress, string memory role, string memory firstName, string memory lastName) public {
