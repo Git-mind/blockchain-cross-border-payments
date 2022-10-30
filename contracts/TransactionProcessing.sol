@@ -79,7 +79,7 @@ contract TransactionProcessing {
         bool isAusValid=true;
 
         for (uint256 i = 0; i < sgResults.length; i++) {
-            if (!sgResults[i]) {
+            if (sgResults[i]) {
                 isSgValid=false; 
                 emit testSgLog(isSgValid);
                 break;
@@ -88,7 +88,7 @@ contract TransactionProcessing {
 
 
         for (uint256 i = 0; i < ausResults.length; i++) {
-            if (!ausResults[i]) {
+            if (ausResults[i]) {
                 isAusValid=false; 
                 emit testAusLog(isAusValid);
 
