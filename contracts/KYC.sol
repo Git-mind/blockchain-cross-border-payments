@@ -25,7 +25,7 @@ contract KYC{
     function onboarding(address payable userAddress, string memory role, string memory firstName, string memory lastName, string memory country, string memory location, string memory nationality) public {
         transactionCount +=1;
         // transactions.push(TransferFundsStruck(msg.sender, receiver, amount, message, block.timestamp));
-        userDict[userAddress] = UserInfoStruct(userAddress, role, firstName, lastName);
+        userDict[userAddress] = UserInfoStruct(userAddress, role, firstName, lastName, country, location, nationality);
 
     // emit TransferEvent(msg.sender, receiver, amount, message, block.timestamp);
     

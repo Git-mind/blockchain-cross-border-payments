@@ -49,6 +49,21 @@
 								"internalType": "string",
 								"name": "lastName",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "country",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "nationality",
+								"type": "string"
 							}
 						],
 						"internalType": "struct KYC.UserInfoStruct",
@@ -79,6 +94,21 @@
 					{
 						"internalType": "string",
 						"name": "lastName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "location",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "nationality",
 						"type": "string"
 					}
 				],
@@ -116,11 +146,11 @@
 	},
 	"sources": {
 		"contracts/KYC.sol": {
-			"keccak256": "0x2ab26bbfb7c4c860e1256f37803a5f92a385bd5c8549603ee4e72b15c7b8c967",
+			"keccak256": "0xa71f977a608c06c2a3047570f771467b43e20a6a220e45f76f29d723f0756d47",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://91ab4319f0572249ab39b4e17a1a8fd2c262da4a6fee7ede8f8119a968073236",
-				"dweb:/ipfs/QmPiReprnkpQrBcBE6iXb3RhRBTRjMTHahu2bS233vEGUW"
+				"bzz-raw://36a800b20ae8e90f9af16d8bd1260100f5a8215a4e2e692e9046344e640372be",
+				"dweb:/ipfs/QmYqXjikhUXcRuhvfB8VXC22NHHcQDpRMawJ2HvALg4o9e"
 			]
 		}
 	},
