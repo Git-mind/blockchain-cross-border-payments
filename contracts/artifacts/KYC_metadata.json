@@ -51,9 +51,9 @@
 								"type": "string"
 							}
 						],
-						"internalType": "struct KYC.UserInfoStruct[]",
+						"internalType": "struct KYC.UserInfoStruct",
 						"name": "",
-						"type": "tuple[]"
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -116,11 +116,11 @@
 	},
 	"sources": {
 		"contracts/KYC.sol": {
-			"keccak256": "0xbe51ceed4f86df1958b74f3cf7a7a6e90825dcb17eb757b57593a4a60ef875ba",
+			"keccak256": "0x2ab26bbfb7c4c860e1256f37803a5f92a385bd5c8549603ee4e72b15c7b8c967",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3f767e2be8c118a5a8f0505cca1ea7214a33aa781c1e6b9e08a32dad817be392",
-				"dweb:/ipfs/QmW3kd9NX5hkPSztavCuVT8bxZHnkvvTuYNPNWShXXfhew"
+				"bzz-raw://91ab4319f0572249ab39b4e17a1a8fd2c262da4a6fee7ede8f8119a968073236",
+				"dweb:/ipfs/QmPiReprnkpQrBcBE6iXb3RhRBTRjMTHahu2bS233vEGUW"
 			]
 		}
 	},

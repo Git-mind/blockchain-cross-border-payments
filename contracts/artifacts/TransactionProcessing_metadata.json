@@ -11,10 +11,34 @@
 						"internalType": "address payable",
 						"name": "_receiver",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_kycAddress",
+						"type": "address"
 					}
 				],
 				"stateMutability": "payable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "firstName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CreateLog",
+				"type": "event"
 			},
 			{
 				"inputs": [],
@@ -27,6 +51,39 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kyc",
+				"outputs": [
+					{
+						"internalType": "contract KYC",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kycAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "processing",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -90,12 +147,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TransactionProcessing.sol": {
-			"keccak256": "0x8c4a77036f0fb2dca3ec073225a34af4fcad7c3a9181ff302c8876f239ee95b0",
+		"contracts/KYC.sol": {
+			"keccak256": "0x2ab26bbfb7c4c860e1256f37803a5f92a385bd5c8549603ee4e72b15c7b8c967",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ebf0247617fe8c8a1776bff0c021a2e0f08aa52c3168a15ff8aaaa130ef8d2a0",
-				"dweb:/ipfs/QmQbEhUwmWw6uUBZAWfW34iKTwvQP5BJKj1wNzRk1EneRg"
+				"bzz-raw://91ab4319f0572249ab39b4e17a1a8fd2c262da4a6fee7ede8f8119a968073236",
+				"dweb:/ipfs/QmPiReprnkpQrBcBE6iXb3RhRBTRjMTHahu2bS233vEGUW"
+			]
+		},
+		"contracts/TransactionProcessing.sol": {
+			"keccak256": "0x646ed3c6859621bc8fd70b339713517bb9e98b84f0b62be06300221f4ed2b81e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bfeab9e43f2033d463a7023877bb5067633cebaf7bd3910a604b8b9d043cfd7d",
+				"dweb:/ipfs/QmUFuVt1w8GRnJpFMNotfnfP22MGwwbjXz6Y3yPAZs7cGj"
 			]
 		}
 	},
