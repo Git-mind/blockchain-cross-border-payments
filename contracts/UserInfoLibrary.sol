@@ -10,9 +10,6 @@ library UserInfoLibrary {
         string location;
         string nationality;
         bool isPoliticallyExposed;
-        // uint256 timestamp;
-        // test git changes
-        // test git changes - xianwei
     }
 
 }

@@ -6,15 +6,7 @@ import "./SgAML.sol";
 import "./UserInfoLibrary.sol";
 
 contract TransactionProcessing {
-    event CreateLog(string nationality, uint256 timestamp);
-    event CreateAMLLog(bool amlResult, uint256 timestamp);
-
     event CreateTransferStatusLog(string transferStatus, uint256 timestamp);
-
-    event testSgLog(bool sgAML);
-    event testAusLog(bool ausAML);
-    event testFinalLog(bool finalLog);
-    event testSgResult(bool sgResult);
 
     address payable public sender;
     address payable public receiver;
@@ -40,70 +32,55 @@ contract TransactionProcessing {
     }
 
     function processing() public {
-        // Check sender and receiver for suspicious activity
-        //KYC - get sender nationality
-
+        
+        //KYC - get sender user info from KYC smart contract
         UserInfoLibrary.UserInfoStruct memory senderUserInfo = kyc.getUserInfo(sender);
-        UserInfoLibrary.UserInfoStruct memory receiverUserInfo = kyc.getUserInfo(
-            receiver
-        );
 
-        //Check Singapore
+        //KYC - get receiver user info from KYC smart contract
+        UserInfoLibrary.UserInfoStruct memory receiverUserInfo = kyc.getUserInfo(receiver);
+
+        //Check Singapore AML
         bool[] memory sgResults = new bool[](3);
         sgResults[0] = sgAml.checkNationality(senderUserInfo, receiverUserInfo);
         sgResults[1] = sgAml.checkPoliticalStatus(senderUserInfo, receiverUserInfo);
         sgResults[2] = sgAml.checkWantedIndividual(senderUserInfo, receiverUserInfo);
-        emit testSgResult(sgResults[0]);
-        emit testSgResult(sgResults[1]);
-        emit testSgResult(sgResults[2]);
 
-        // bool[] memory sgResults = [
-        //     sgAml.checkNationality(senderUserInfo, receiverUserInfo),
-        //     sgAml.checkPoliticalStatus(senderUserInfo, receiverUserInfo),
-        //     sgAml.checkWantedIndividual(senderUserInfo, receiverUserInfo)
-        // ];
-
-        //Check Australia
+        // Check sender and receiver for suspicious activity
+        //Check Australia AML
         bool[] memory ausResults = new bool[](3);
         sgResults[0] = ausAml.checkNationality(senderUserInfo, receiverUserInfo);
         sgResults[1] = ausAml.checkPoliticalStatus(senderUserInfo, receiverUserInfo);
         sgResults[2] = ausAml.checkWantedIndividual(senderUserInfo, receiverUserInfo);
 
-        // bool[] memory ausResults = [
-        //     ausAml.checkNationality(senderUserInfo, receiverUserInfo),
-        //     ausAml.checkPoliticalStatus(senderUserInfo, receiverUserInfo),
-        //     ausAml.checkWantedIndividual(senderUserInfo, receiverUserInfo)
-        // ];
-
         bool isSgValid=true;
         bool isAusValid=true;
 
+        // check if any checks in SgAML smart contract fails
         for (uint256 i = 0; i < sgResults.length; i++) {
             if (sgResults[i]) {
                 isSgValid=false; 
-                emit testSgLog(isSgValid);
                 break;
             }
         }
 
-
+        // check if any checks in AusAML smart contract fails
         for (uint256 i = 0; i < ausResults.length; i++) {
             if (ausResults[i]) {
                 isAusValid=false; 
-                emit testAusLog(isAusValid);
-
                 break;
             }
         }
-        //did not pass AML/CTF for either countries 
-        // require(!isSgValid || !isAusValid, "Failed AML checks for either countries");
-        //Pass AML/CTF for either countries 
+         
+
+        
         emit testFinalLog(isSgValid && isAusValid);
+
+        //did not pass AML/CTF for either countries
         if(!isSgValid || !isAusValid){
             (bool sent, bytes memory data) = sender.call{value: getBalance()}("");
             emit CreateTransferStatusLog("Transfer failure - Failed AML checks for either countries, Ether transfer back to Sender.", block.timestamp);
-            // require(sent, "Failed to send Ether");
         } else {
+            //Pass AML/CTF for both countries 
             (bool sent, bytes memory data) = receiver.call{value: getBalance()}("");
             emit CreateTransferStatusLog("Transfer successfully, Ether sent to Receiver.", block.timestamp);
 
