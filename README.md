@@ -56,6 +56,33 @@
   
   
  ## Unsuccesful Transaction 
+    
+ 1. Set the sender and receiver value like this 
+ 
+ 
+    ```
+
+    Sender KYC information
+    userAddress: 0x5fe9dD4c80ab7742B62Fb40CE1fBE37D226645A1
+    Role: sender
+    firstName: xian
+    lastName: wei
+    Country: Iran
+    Location: Iran
+    Nationality: Iran	
+    isPoliticallyExposed: true
+
+    Receiver KYC information
+    userAddress: 0xfB3Ce1611272f443B406BcE2e2dd1eEA85Ad340E
+    Role: receiver	
+    firstName: Aravind
+    lastName: G
+    Country: Iraq
+    Location: Iraq
+    Nationality: Iraq	
+    isPoliticallyExposed: true
+    ```  
+2. Run processing function in transactionProcessing smart contract with 50 eth as value sent
 
 
 
