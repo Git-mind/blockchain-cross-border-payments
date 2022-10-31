@@ -51,6 +51,11 @@
       Make sure the one deploying the smart contract is the sender with 50 ether as value. Once deployed,
       the transactionProcessing will hold the balance of 50 ether.
       ```
+      
+  4. Run processing function in transactionProcessing smart contract 
+  
+  
+ ## Unsuccesful Transaction 
 
 
 
