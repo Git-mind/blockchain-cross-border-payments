@@ -45,19 +45,6 @@ contract SgAML {
             
     }
 
-    function checkAmt(address payable sender, uint256 amount)
-        public
-        payable
-        returns (bool)
-    {
-        if (amount > maxAmount) {
-            sender.transfer(amount);
-            emit CreateExceededMaxAmtErrorLog("Exceeded Max Amount", block.timestamp);
-            return true;
-        }
-        sender.transfer(amount);
-        return false;
-    }
 
     function checkWantedIndividual(
         UserInfoLibrary.UserInfoStruct memory senderUserInfo,

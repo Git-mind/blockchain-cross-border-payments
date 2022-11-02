@@ -72,9 +72,6 @@ contract TransactionProcessing {
         }
          
 
-        
-        emit testFinalLog(isSgValid && isAusValid);
-
         //did not pass AML/CTF for either countries
         if(!isSgValid || !isAusValid){
             (bool sent, bytes memory data) = sender.call{value: getBalance()}("");
